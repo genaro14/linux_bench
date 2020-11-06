@@ -1,8 +1,8 @@
 # linux_bench
-bench cpu with kernel compile time
++ bench cpu with kernel compile time
 
 Execute like:
-clone and cd repo
+git clone and cd repository folder
 chmod +x patch.sh
 ./patch.sh 
 Answer Y/N
