@@ -24,8 +24,10 @@ if echo "$answer" | grep -iq "^s" ;then
 else
     echo 'Fuentes no descargadas'
 fi
-
+if [ ! -d "kcbench" ] 
+then
 git clone https://gitlab.com/knurd42/kcbench
+fi
 echo -e "Ejecutar KCbench?"
 old_stty_cfg=$(stty -g)
 stty raw -echo
