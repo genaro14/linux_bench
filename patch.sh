@@ -5,7 +5,7 @@ echo -e 'Hola' $USER
 echo -e -n "Instalar Herramientas (s/n)? "
 old_stty_cfg=$(stty -g)
 stty raw -echo
-answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+answer=$( while ! head -c 1 | grep -i '[ns]' ;do true ;done )
 stty $old_stty_cfg
 if echo "$answer" | grep -iq "^s" ;then
     echo 'Instalando herramientas'
@@ -16,7 +16,7 @@ fi
 echo -e "Descargar Fuentes del Kernel Torvalds Repo(s/n)? "
 old_stty_cfg=$(stty -g)
 stty raw -echo
-answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+answer=$( while ! head -c 1 | grep -i '[ns]' ;do true ;done )
 stty $old_stty_cfg
 if echo "$answer" | grep -iq "^s" ;then
     echo 'Descargando Fuentes'
@@ -31,12 +31,12 @@ fi
 echo -e "Ejecutar KCbench?"
 old_stty_cfg=$(stty -g)
 stty raw -echo
-answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+answer=$( while ! head -c 1 | grep -i '[ns]' ;do true ;done )
 stty $old_stty_cfg
 if echo "$answer" | grep -iq "^s" ;then
-	printf 'Ejecutando bench en' $ROUTE
-	./kcbench -s $ROUTE
+	echo -e 'Ejecutando bench en ' $ROUTE
+	./kcbench/kcbench -s $ROUTE
 else
-    echo 'Terminado'
+    echo -e 'Terminado'
 fi
 
