@@ -1,5 +1,5 @@
 #! /bin/bash
-ROUTE="~/.cache/kcbench/linux/"
+ROUTE="~/.cache/kcbench/linux-5.8.18"
 echo -e 'Linux benchmarking'
 echo -e 'Hola' $USER
 echo -e -n "Instalar Herramientas (s/n)? "
@@ -13,14 +13,19 @@ if echo "$answer" | grep -iq "^s" ;then
 else
     echo 'No instalar herramientas'
 fi
-echo -e "Descargar Fuentes del Kernel Torvalds Repo(s/n)? "
+echo -e "Descargar Fuentes de Kernel.org(s/n)? "
 old_stty_cfg=$(stty -g)
 stty raw -echo
 answer=$( while ! head -c 1 | grep -i '[ns]' ;do true ;done )
 stty $old_stty_cfg
 if echo "$answer" | grep -iq "^s" ;then
     echo 'Descargando Fuentes'
-    git clone https://github.com/torvalds/linux ~/.cache/kcbench/
+    if [ ! -d "~/.cache/kcbench" ]
+    then
+	mkdir -p ~/.cache/kcbench
+    fi
+    wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.8.18.tar.xz -P ~/.cache/kcbench
+    tar -xf ~/.cache/kcbench/linux-5.8.18.tar.xz -C ~/.cache/kcbench
 else
     echo 'Fuentes no descargadas'
 fi
