@@ -1,0 +1,17 @@
+Processor:           Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz [16 CPUs]
+Cpufreq; Memory:     powersave [intel_pstate]; 15876 MiB
+Linux running:       5.8.18-1-MANJARO [x86_64]
+Compiler:            gcc (GCC) 10.2.0
+Linux compiled:      5.8.18 [/home/box/.cache/kcbench/linux-5.8.18]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 16):       96.48 seconds / 37.31 kernels/hour [P:1452%]
+Run 2 (-j 16):       95.97 seconds / 37.51 kernels/hour [P:1460%]
+Run 3 (-j 19):       96.42 seconds / 37.34 kernels/hour [P:1459%]
+Run 4 (-j 19):       101.22 seconds / 35.57 kernels/hour [P:1410%]
+Run 5 (-j 8):        119.89 seconds / 30.03 kernels/hour [P:759%]
+Run 6 (-j 8):        119.86 seconds / 30.04 kernels/hour [P:761%]
+Run 7 (-j 11):       108.35 seconds / 33.23 kernels/hour [P:1036%]
+Run 8 (-j 11):       109.12 seconds / 32.99 kernels/hour [P:1029%]
+
