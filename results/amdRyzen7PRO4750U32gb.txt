@@ -1,0 +1,28 @@
+Clonando en 'kcbench'...
+warning: redirigiendo a https://gitlab.com/knurd42/kcbench.git/
+remote: Enumerating objects: 551, done.
+remote: Counting objects: 100% (551/551), done.
+remote: Compressing objects: 100% (251/251), done.
+remote: Total 672 (delta 355), reused 459 (delta 299), pack-reused 121
+Recibiendo objetos: 100% (672/672), 221.40 KiB | 2.67 MiB/s, listo.
+Resolviendo deltas: 100% (425/425), listo.
+Ejecutar KCbench?
+Ejecutando bench en  ~/.cache/kcbench/linux-5.8.18
+Processor:           AMD Ryzen 7 PRO 4750U with Radeon Graphics [16 CPUs]
+Cpufreq; Memory:     ondemand [acpi-cpufreq]; 31393 MiB
+Linux running:       5.8.0-050800-generic [x86_64]
+Compiler:            gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Linux compiled:      5.8.18 [/home/adrian/.cache/kcbench/linux-5.8.18]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 16):       159.49 seconds / 22.57 kernels/hour [P:1459%]
+Run 2 (-j 16):       157.39 seconds / 22.87 kernels/hour [P:1487%]
+Run 3 (-j 19):       185.03 seconds / 19.46 kernels/hour [P:1481%]
+Run 4 (-j 19):       236.89 seconds / 15.20 kernels/hour [P:1502%]
+Run 5 (-j 8):        227.22 seconds / 15.84 kernels/hour [P:771%]
+Run 6 (-j 8):        226.16 seconds / 15.92 kernels/hour [P:769%]
+Run 7 (-j 11):       210.90 seconds / 17.07 kernels/hour [P:1054%]
+Run 8 (-j 11):       211.66 seconds / 17.01 kernels/hour [P:1054%]
+
+
