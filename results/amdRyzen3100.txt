@@ -1,0 +1,17 @@
+Processor:           AMD Ryzen 3 3100 4-Core Processor [8 CPUs]
+Cpufreq; Memory:     schedutil [acpi-cpufreq]; 16008 MiB
+Linux running:       5.6.16-1-MANJARO [x86_64]
+Compiler:            gcc (GCC) 10.1.0
+Linux compiled:      5.8.18 [/home/box/.cache/kcbench/linux-5.8.18]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 8):        207.96 seconds / 17.31 kernels/hour [P:685%]
+Run 2 (-j 8):        208.49 seconds / 17.27 kernels/hour [P:683%]
+Run 3 (-j 10):       205.60 seconds / 17.51 kernels/hour [P:704%]
+Run 4 (-j 10):       205.75 seconds / 17.50 kernels/hour [P:704%]
+Run 5 (-j 4):        279.04 seconds / 12.90 kernels/hour [P:388%]
+Run 6 (-j 4):        279.05 seconds / 12.90 kernels/hour [P:388%]
+Run 7 (-j 6):        229.18 seconds / 15.71 kernels/hour [P:568%]
+Run 8 (-j 6):        229.11 seconds / 15.71 kernels/hour [P:568%]
+
