@@ -1,0 +1,18 @@
+Ejecutando bench en  ~/.cache/kcbench/linux-5.8.18
+Processor:           AMD Ryzen 5 PRO 4650U with Radeon Graphics [12 CPUs]
+Cpufreq; Memory:     ondemand [acpi-cpufreq]; 7383 MiB
+Linux running:       5.8.0-43-generic [x86_64]
+Compiler:            gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Linux compiled:      5.8.18 [/home/daniel/.cache/kcbench/linux-5.8.18]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 12):       216.97 seconds / 16.59 kernels/hour [P:1124%]
+Run 2 (-j 12):       213.10 seconds / 16.89 kernels/hour [P:1139%]
+Run 3 (-j 15):       213.65 seconds / 16.85 kernels/hour [P:1138%]
+Run 4 (-j 15):       214.10 seconds / 16.81 kernels/hour [P:1132%]
+Run 5 (-j 6):        267.97 seconds / 13.43 kernels/hour [P:582%]
+Run 6 (-j 6):        267.74 seconds / 13.45 kernels/hour [P:582%]
+Run 7 (-j 9):        231.03 seconds / 15.58 kernels/hour [P:866%]
+Run 8 (-j 9):        231.50 seconds / 15.55 kernels/hour [P:865%]
+
