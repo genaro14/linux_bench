@@ -1,0 +1,18 @@
+Ejecutando bench en  ~/.cache/kcbench/linux-5.8.18
+Processor:           11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz [8 CPUs]
+Cpufreq; Memory:     powersave [intel_pstate]; 15716 MiB
+Linux running:       5.8.0-59-generic [x86_64]
+Compiler:            gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Linux compiled:      5.8.18 [/home/nicolas/.cache/kcbench/linux-5.8.18]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 8):        205.78 seconds / 17.49 kernels/hour [P:774%]
+Run 2 (-j 8):        211.44 seconds / 17.03 kernels/hour [P:766%]
+Run 3 (-j 10):       210.76 seconds / 17.08 kernels/hour [P:771%]
+Run 4 (-j 10):       208.79 seconds / 17.24 kernels/hour [P:776%]
+Run 5 (-j 4):        233.22 seconds / 15.44 kernels/hour [P:392%]
+Run 6 (-j 4):        232.50 seconds / 15.48 kernels/hour [P:393%]
+Run 7 (-j 6):        220.41 seconds / 16.33 kernels/hour [P:586%]
+Run 8 (-j 6):        219.08 seconds / 16.43 kernels/hour [P:586%]
+
