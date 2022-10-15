@@ -1,0 +1,17 @@
+Processor:           Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz [8 CPUs]
+Cpufreq; Memory:     powersave [intel_pstate]; 31769 MiB
+Linux running:       5.10.147-1-MANJARO [x86_64]
+Compiler:            gcc (GCC) 12.2.0
+Linux compiled:      5.19.9 [/home/box/.cache/kcbench/linux-5.19.9]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 8):        448.31 seconds / 8.03 kernels/hour [P:753%, 1760 maj. pagefaults]
+Run 2 (-j 8):        447.92 seconds / 8.04 kernels/hour [P:753%, 1407 maj. pagefaults]
+Run 3 (-j 10):       449.77 seconds / 8.00 kernels/hour [P:754%, 443 maj. pagefaults]
+Run 4 (-j 10):       450.64 seconds / 7.99 kernels/hour [P:754%, 380 maj. pagefaults]
+Run 5 (-j 4):        553.75 seconds / 6.50 kernels/hour [P:387%, 1396 maj. pagefaults]
+Run 6 (-j 4):        554.16 seconds / 6.50 kernels/hour [P:387%, 895 maj. pagefaults]
+Run 7 (-j 6):        492.71 seconds / 7.31 kernels/hour [P:574%, 826 maj. pagefaults]
+Run 8 (-j 6):        493.78 seconds / 7.29 kernels/hour [P:574%, 944 maj. pagefaults]
+
