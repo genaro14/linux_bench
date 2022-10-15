@@ -1,5 +1,5 @@
 #! /bin/bash
-ROUTE="~/.cache/kcbench/linux-5.8.18"
+ROUTE="~/.cache/kcbench/linux-5.19.9"
 echo -e 'Linux benchmarking'
 echo -e 'Hola' $USER
 echo -e -n "Instalar Herramientas (s/n)? "
@@ -24,12 +24,12 @@ if echo "$answer" | grep -iq "^s" ;then
     then
 	mkdir -p ~/.cache/kcbench
     fi
-    wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.8.18.tar.xz -P ~/.cache/kcbench
-    tar -xf ~/.cache/kcbench/linux-5.8.18.tar.xz -C ~/.cache/kcbench
+    wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.19.9.tar.xz -P ~/.cache/kcbench
+    tar -xf ~/.cache/kcbench/linux-5.19.9.tar.xz -C ~/.cache/kcbench
 else
     echo 'Fuentes no descargadas'
 fi
-if [ ! -d "kcbench" ] 
+if [ ! -d "kcbench" ]
 then
 git clone https://gitlab.com/knurd42/kcbench
 fi
