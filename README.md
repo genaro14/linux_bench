@@ -5,7 +5,7 @@
 git clone and cd repository folder.
 ``` bash
 git clone https://github.com/genaro14/linux_bench/
-cd linux bench
+cd linux_bench
 chmod +x run (if needed)
 ./run
 ```
