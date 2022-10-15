@@ -1,0 +1,17 @@
+rocessor:           12th Gen Intel(R) Core(TM) i5-12400F [12 CPUs]
+Cpufreq; Memory:     powersave [intel_pstate]; 31917 MiB
+Linux running:       5.19.13-arch1-1 [x86_64]
+Compiler:            gcc (GCC) 12.2.0
+Linux compiled:      5.19.9 [/home/box/.cache/kcbench/linux-5.19.9]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 12):       127.54 seconds / 28.23 kernels/hour [P:1063%, 5747 maj. pagefaults]
+Run 2 (-j 12):       131.51 seconds / 27.37 kernels/hour [P:1039%, 5196 maj. pagefaults]
+Run 3 (-j 15):       127.41 seconds / 28.26 kernels/hour [P:1065%, 1008 maj. pagefaults]
+Run 4 (-j 15):       126.69 seconds / 28.42 kernels/hour [P:1065%, 753 maj. pagefaults]
+Run 5 (-j 6):        153.41 seconds / 23.47 kernels/hour [P:558%, 2231 maj. pagefaults]
+Run 6 (-j 6):        153.65 seconds / 23.43 kernels/hour [P:557%, 2550 maj. pagefaults]
+Run 7 (-j 9):        138.23 seconds / 26.04 kernels/hour [P:821%, 2965 maj. pagefaults]
+Run 8 (-j 9):        138.03 seconds / 26.08 kernels/hour [P:821%, 2190 maj. pagefaults]
+
