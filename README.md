@@ -1,4 +1,4 @@
-# linux_bench
+# Linux Bench
 + bench cpu with kernel compile time
 
 ## Execute like:
