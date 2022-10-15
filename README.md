@@ -4,7 +4,9 @@
 ## Execute like:
 git clone and cd repository folder.
 ``` bash
-chmod +x patch.sh
-./patch.sh 
+git clone https://github.com/genaro14/linux_bench/
+cd linux bench
+chmod +x run (if needed)
+./run
 ```
-+ Answer Y/N
++ Answer y/n

@@ -1,0 +1,77 @@
+#! /bin/bash
+OS=`uname -s`
+REV=`uname -r`
+MACH=`uname -m`
+
+GetVersionFromFile() {
+	VERSION="$(tr "\n" ' ' < cat "$1" | sed s/.*VERSION.*=\ // )"
+}
+if [ "${OS}" = "Linux" ] ; then
+	KERNEL=$(uname -r)
+	
+	if [ -f /etc/debian_version ] ; then
+		if [ "$(awk -F= '/DISTRIB_ID/ {print $2}' /etc/lsb-release)" = "Ubuntu" ]; then
+			DIST="Ubuntu"
+		else
+			DIST="Debian $(cat /etc/debian_version)"
+		fi
+	elif [ -f /etc/arch-release ] ; then
+		DIST="Arch"
+	fi
+	
+	OSSTR="${OS} ${DIST} ${REV}(${PSUEDONAME} ${KERNEL} ${MACH})"
+  echo -e 'Hello' $USER
+  echo "System:" ${OSSTR}
+fi
+echo "Your Distribution is" $DIST
+
+ROUTE="~/.cache/kcbench/linux-5.19.9"
+echo -e 'Linux benchmarking'
+echo -e -n "Install Tools (y/n)? "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+
+if echo "$answer" | grep -iq "^y" ;then
+    echo 'Installing Tools'
+    if [ "$DIST" == "Ubuntu" ]; then
+        sudo apt install bc bison curl flex util-linux make time perl-base pkg-config procps libssl-dev libelf-dev gcc binutils
+    elif [ "$DIST" == "Arch" ]; then
+        sudo pacman -S bc bison flex util-linux make time perl-base pkg-config procps openssl libelf gcc binutils
+    fi
+else
+    echo 'Will not install tools'
+fi
+echo -e "Donwload Kernel sources(y/n)? "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+    echo 'Donwloading sources from kernel.org'
+    if [ ! -d "~/.cache/kcbench" ]
+    then
+	mkdir -p ~/.cache/kcbench
+    fi
+    wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.19.9.tar.xz -P ~/.cache/kcbench
+    tar -xf ~/.cache/kcbench/linux-5.19.9.tar.xz -C ~/.cache/kcbench
+else
+    echo 'Sources not donwloaded'
+fi
+if [ ! -d "kcbench" ]
+then
+git clone https://gitlab.com/knurd42/kcbench
+fi
+echo -e "Run KCbench? (y/n)"
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	echo -e 'Runing bench in ' $ROUTE
+	./kcbench/kcbench -s $ROUTE
+else
+    echo -e 'Finish!'
+fi
+
