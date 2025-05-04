@@ -1,0 +1,14 @@
+Processor:           Intel(R) Core(TM) i5-4278U CPU @ 2.60GHz [4 threads]
+Cpufreq; Memory:     schedutil [intel_cpufreq]; 7814 MiB
+Linux running:       5.15.0-124-generic [x86_64]
+Compiler:            gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+Linux compiled:      5.19.9 [/home/box/.cache/kcbench/linux-5.19.9]
+Config; Environment: defconfig; CCACHE_DISABLE="1"
+Build command:       make vmlinux
+Filling caches:      This might take a while... Done
+Run 1 (-j 4):        607.06 seconds / 5.93 kernels/hour [P:388%, 1444 maj. pagefaults]
+Run 2 (-j 4):        607.44 seconds / 5.93 kernels/hour [P:388%, 1489 maj. pagefaults]
+Run 3 (-j 6):        611.36 seconds / 5.89 kernels/hour [P:388%, 2054 maj. pagefaults]
+Run 4 (-j 6):        610.34 seconds / 5.90 kernels/hour [P:388%, 2077 maj. pagefaults]
+Run 5 (-j 2):        706.92 seconds / 5.09 kernels/hour [P:198%, 1235 maj. pagefaults]
+Run 6 (-j 2):        707.55 seconds / 5.09 kernels/hour [P:198%, 1286 maj. pagefaults]
